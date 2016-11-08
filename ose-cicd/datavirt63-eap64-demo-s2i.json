@@ -479,7 +479,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "http://github.com/bdecoste/jdv-demo",
+                        "uri": "http://github.com/bdecoste/jdv-demo-old",
                         "ref": ""
                     },
                     "contextDir": "ose-dba/vdb"
