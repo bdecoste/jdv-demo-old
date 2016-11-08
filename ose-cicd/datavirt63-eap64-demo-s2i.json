@@ -201,20 +201,6 @@
 
     ],
     "objects": [
-         {
-            "kind": "Secret",
-            "apiVersion": "v1",
-            "metadata": {
-                "annotations": {
-                    "description": "Default secret file with name 'jboss' and password 'mykeystorepass'"
-                },
-                "name": "app-configure-demo-secret"
-            },
-            "data": {
-                  "preconfigure.sh": "IyEvYmluL2Jhc2gKCnNldCAteAoKZWNobyAiISEhISEhISEhISEhISEhISEgcHJlL3Bvc3QgcnVu\ndGltZSBjb25maWd1cmUiCmNhdCAvb3B0L2VhcC9zdGFuZGFsb25lL2NvbmZpZ3VyYXRpb24vc3Rh\nbmRhbG9uZS1vcGVuc2hpZnQueG1sCg==",
-                  "postconfigure.sh": "IyEvYmluL2Jhc2gKCnNldCAteAoKZWNobyAiISEhISEhISEhISEhISEhISEgcHJlL3Bvc3QgcnVu\ndGltZSBjb25maWd1cmUiCmNhdCAvb3B0L2VhcC9zdGFuZGFsb25lL2NvbmZpZ3VyYXRpb24vc3Rh\nbmRhbG9uZS1vcGVuc2hpZnQueG1sCg=="
-            }
-        },
         {
             "kind": "Secret",
             "apiVersion": "v1",
@@ -227,19 +213,6 @@
             "data": {
                   "preconfigure.sh": "IyEvYmluL2Jhc2gKCnNldCAteAoKZWNobyAiISEhISEhISEhISEhISEhISEgcHJlL3Bvc3QgcnVu\ndGltZSBjb25maWd1cmUiCmNhdCAvb3B0L2VhcC9zdGFuZGFsb25lL2NvbmZpZ3VyYXRpb24vc3Rh\nbmRhbG9uZS1vcGVuc2hpZnQueG1sCg==",
                   "postconfigure.sh": "IyEvYmluL2Jhc2gKCnNldCAteAoKZWNobyAiISEhISEhISEhISEhISEhISEgcHJlL3Bvc3QgcnVu\ndGltZSBjb25maWd1cmUiCmNhdCAvb3B0L2VhcC9zdGFuZGFsb25lL2NvbmZpZ3VyYXRpb24vc3Rh\nbmRhbG9uZS1vcGVuc2hpZnQueG1sCgpQR1BBU1NXT1JEPSRQT1NUR1JFU1FMX1BBU1NXT1JEIC91\nc3IvYmluL3BzcWwgLWggJERBVEFWSVJUX1BPU1RHUkVTUUxfU0VSVklDRV9IT1NUIC1kICRQT1NU\nR1JFU1FMX0RBVEFCQVNFIC1VICRQT1NUR1JFU1FMX1VTRVJOQU1FIC1mICR7SE9NRX0vc291cmNl\nL2luamVjdGVkL2luamVjdGVkLWZpbGVzL2N1c3RvbWVyLXNjaGVtYS1wZy5zcWwK"
-            }
-        },
-        {
-            "kind": "Secret",
-            "apiVersion": "v1",
-            "metadata": {
-                "annotations": {
-                    "description": "Default secret file with name 'jboss' and password 'mykeystorepass'"
-                },
-                "name": "datasources-demo-secret"
-            },
-            "data": {
-                  "datasources.properties": "I0RBVEFTT1VSQ0VTCkRBVEFTT1VSQ0VTPVRFSUlECgpURUlJRF9KTkRJPWphdmE6L2pib3NzL2Rh\ndGFzb3VyY2VzL0hpYmVybmF0ZTRUZWlpZFF1aWNrc3RhcnREUwpURUlJRF9EUklWRVI9dGVpaWQK\nVEVJSURfVVNFUk5BTUU9dGVpaWRVc2VyClRFSUlEX1BBU1NXT1JEPVBAc3N3b3JkMQpURUlJRF9V\nUkw9amRiYzp0ZWlpZDpIaWJlcm5hdGVfUG9ydGZvbGlvQG1tOi8vamRiYy1kYXRhdmlydC5kZW1v\nLnN2Yy5jbHVzdGVyLmxvY2FsOjMxMDAwO3Nob3dwbGFuPW9uCiNURUlJRF9VUkw9amRiYzp0ZWlp\nZDpIaWJlcm5hdGVfUG9ydGZvbGlvQG1tczovL3NlY3VyZWpkYmMtZGF0YXZpcnQtZGVtby5jbG91\nZGFwcHMuZXhhbXBsZS5jb206NDQzO3Nob3dwbGFuPW9uClRFSUlEX0RBVEFCQVNFPUhpYmVybmF0\nZV9Qb3J0Zm9saW8KVEVJSURfU0VSVklDRV9IT1NUPWpkYmMtZGF0YXZpcnQuZGVtby5zdmMuY2x1\nc3Rlci5sb2NhbApURUlJRF9TRVJWSUNFX1BPUlQ9MzEwMDAKVEVJSURfTk9OWEE9dHJ1ZQpURUlJ\nRF9KVEE9ZmFsc2UKCg=="
             }
         },
         {
@@ -494,27 +467,6 @@
             }
         },
         {
-            "kind": "ImageStream",
-            "apiVersion": "v1",
-            "metadata": { 
-                "name": "demo-eap-extensions",
-                "labels": {
-                    "application": "${APPLICATION_NAME}eap"
-                }
-            },
-            "spec": {
-                "tags": [
-                    {
-                        "name": "1.0",
-                        "annotations": {
-                            "supports":"demo-eap-extensions:1.0",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "kind": "BuildConfig",
             "apiVersion": "v1",
             "metadata": {
@@ -541,58 +493,6 @@
                         "kind": "ImageStreamTag",
                         "namespace": "demo",
                         "name": "demo-jdv-extensions:1.0"
-                    }
-                },
-                "triggers": [
-                    {
-                        "type": "GitHub",
-                        "github": {
-                            "secret": "${GITHUB_WEBHOOK_SECRET}"
-                        }
-                    },
-                    {
-                        "type": "Generic",
-                        "generic": {
-                            "secret": "${GENERIC_WEBHOOK_SECRET}"
-                        }
-                    },
-                    {
-                        "type": "ImageChange",
-                        "imageChange": {}
-                    },
-                    {
-                        "type": "ConfigChange"
-                    }
-                ]
-            }
-        },
-        {
-            "kind": "BuildConfig",
-            "apiVersion": "v1",
-            "metadata": {
-                "name": "demo-eap-extensions",
-                "labels": {
-                    "application": "${APPLICATION_NAME}eap"
-                }
-            },
-            "spec": {
-                "source": {
-                    "type": "Git",
-                    "git": {
-                        "uri": "http://github.com/bdecoste/jdv-demo",
-                        "ref": ""
-                    },
-                    "contextDir": "ose-dba/app"
-                },
-                "strategy": {
-                    "type": "Docker",
-                    "dockerfilePath": "Dockerfile"
-                },
-                "output": {
-                    "to": {
-                        "kind": "ImageStreamTag",
-                        "namespace": "demo",
-                        "name": "demo-eap-extensions:1.0"
                     }
                 },
                 "triggers": [
@@ -718,25 +618,10 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "http://github.com/bdecoste/jdv-demo-app",
+                        "uri": "http://github.com/bdecoste/jdv-demo-app-old",
                         "ref": ""
                     },
-                    "contextDir": "",
-                    "images": [
-                        {
-                            "from": {
-                                "kind": "ImageStreamTag",
-                                "namespace": "demo",
-                                "name": "demo-eap-extensions:1.0"
-                            },
-                            "paths": [
-                                {
-                                    "destinationDir": ".",
-                                    "sourcePath": "/injected"
-                                }
-                             ]
-                        }
-                    ]
+                    "contextDir": ""
                 },
                 "strategy": {
                     "type": "Source",
@@ -746,13 +631,7 @@
                             "kind": "ImageStreamTag",
                             "namespace": "${IMAGE_STREAM_NAMESPACE}",
                             "name": "jboss-eap64-openshift:1.4"
-                        },
-                        "env": [
-                            {
-                                "name": "CUSTOM_INSTALL_DIRECTORIES",
-                                "value": "injected"
-                            }
-                        ]
+                        }
                     }
                 },
                 "output": {
@@ -1091,18 +970,6 @@
                                 "name": "${APPLICATION_NAME}-eap",
                                 "image": "${APPLICATION_NAME}-eap",
                                 "imagePullPolicy": "Always",
-                                "volumeMounts": [
-                                    {
-                                        "name": "jdv-demo-app-volume",
-                                        "mountPath": "/etc/eap-extensions",
-                                        "readOnly": true
-                                    },
-                                    {
-                                        "name": "config-demo-app-volume",
-                                        "mountPath": "/opt/eap/extensions",
-                                        "readOnly": false
-                                    }
-                                ],
                                 "livenessProbe": {
                                     "exec": {
                                         "command": [
@@ -1168,20 +1035,6 @@
                                         "value": "/etc/eap-extensions/datasources.properties"
                                     }
                                 ]
-                            }
-                        ],
-                        "volumes": [
-                           {
-                                "name": "jdv-demo-app-volume",
-                                "secret": {
-                                    "secretName": "datasources-demo-secret"
-                                }
-                            },
-                            {
-                                "name": "config-demo-app-volume",
-                                "secret": {
-                                    "secretName": "app-configure-demo-secret"
-                                }
                             }
                         ]
                     }
